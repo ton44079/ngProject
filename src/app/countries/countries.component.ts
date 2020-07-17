@@ -22,6 +22,7 @@ export class CountriesComponent implements OnInit {
   }
 
   countiesData(): Country[] {
+    //return data with filter + full text search
     return this.countries.filter(e => e.name.toLowerCase().includes(this.search.toLowerCase())
       || e.capital.toLowerCase().includes(this.search.toLowerCase())
       || e.subregion.toLowerCase().includes(this.search.toLowerCase())

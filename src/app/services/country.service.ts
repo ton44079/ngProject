@@ -20,11 +20,10 @@ export class CountryService {
     private http: HttpClient,
   ) { }
 
-  /** GET heroes from the server */
+  /** GET Countries from the server */
   getCountries(): Observable<Country[]> {
     return this.http.get<Country[]>(this.apiUrl)
       .pipe(
-        tap(_ => console.log('fetched Countries',_)),
         catchError(this.handleError<Country[]>('Country', []))
       );
   }
