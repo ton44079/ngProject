@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Country } from '../models/country';
 
 @Component({
@@ -7,12 +7,7 @@ import { Country } from '../models/country';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  country: Country = {
-    name: 'Afghanistan',
-    capital: 'Kabul',
-    subregion: 'Southern Asia',
-    population: 27657145
-  }
+  @Input() country: Country
 
   constructor() { }
 
