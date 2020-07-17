@@ -1,0 +1,44 @@
+.card {
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 1px 2px 2px grey;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.c-name {
+    color: cornflowerblue;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.c-sup-detail {
+    font-size: 15px;
+    color: gray
+}
+
+.c-sup-detail span {
+    color: black;
+}
+
+.c-population-title {
+    font-size: 10px;
+    text-align: center;
+    color: gray
+}
+
+.c-population-text {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.5;
+}
