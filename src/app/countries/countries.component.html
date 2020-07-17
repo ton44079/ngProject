@@ -1,3 +1,8 @@
-<div class="container">
-    <app-card *ngFor="let country of countries" [country]="country"></app-card>
+<div class="main">
+    <div class="search-section">
+        <input class="seach-box" type="text" placeholder="Search country.." [(ngModel)]="search" />
+    </div>
+    <div class="cards">
+        <app-card class="margin-bot" *ngFor="let country of countiesData()" [country]="country"></app-card>
+    </div>
 </div>

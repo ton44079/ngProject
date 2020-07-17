@@ -1,3 +1,27 @@
-.container>>>* {
-    margin-bottom: 10px;
+.main {
+    width: 350px;
+}
+
+.search-section {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.seach-box {
+    flex: 1 1 100%;
+    border: none;
+    border-bottom: 1px solid grey;
+    font-size: 20px;
+}
+
+.seach-box:focus {
+    outline: none;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

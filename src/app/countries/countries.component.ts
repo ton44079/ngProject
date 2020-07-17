@@ -9,6 +9,7 @@ import { Country } from '../models/country';
 })
 export class CountriesComponent implements OnInit {
   countries: Country[]
+  search: string = ""
   constructor(private countryService: CountryService) { }
 
   ngOnInit(): void {
@@ -18,5 +19,13 @@ export class CountriesComponent implements OnInit {
   getCountries(): void {
     this.countryService.getCountries()
       .subscribe(countries => this.countries = countries);
+  }
+
+  countiesData(): Country[] {
+    return this.countries.filter(e => e.name.toLowerCase().includes(this.search.toLowerCase())
+      || e.capital.toLowerCase().includes(this.search.toLowerCase())
+      || e.subregion.toLowerCase().includes(this.search.toLowerCase())
+      || e.population.toString().includes(this.search)
+    )
   }
 }
